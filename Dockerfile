@@ -1,4 +1,4 @@
-FROM denoland/deno:1.28.3 as builder
+FROM docker.io/denoland/deno:1.28.3
 
 ARG GIT_REVISION
 ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
@@ -12,5 +12,5 @@ COPY . .
 
 RUN deno cache main.ts --import-map=import_map.json
 
-RUN deno compile  --allow-net --allow-env --allow-read --import-map=./import_map.json main.ts
+CMD ["run", "--allow-net", "--allow-env", "--allow-read", "--allow-write", "--allow-run", "main.ts"]
 

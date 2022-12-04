@@ -1,2 +1,1 @@
--- require("q.completion").deno()
-require'lspconfig'.denols.setup{}
+require 'lspconfig'.denols.setup {}
