@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: qtube.hienph.dev
+  - host: qtube.show.hienph.dev
     http:
       paths:
       - path: /
